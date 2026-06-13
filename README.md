@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Volunteer Management System Backend
 
 ## Overview
@@ -61,6 +61,4 @@ JWT_SECRET=mysecretkey
 - PUT /api/volunteers/:id/approve
 - DELETE /api/volunteers/:id
 - GET /api/volunteers/dashboard
-=======
-# Volunteer-Management-system
->>>>>>> 03688dbe8095279ea7c1a0ed0d91d4e0f2561fd4
+
