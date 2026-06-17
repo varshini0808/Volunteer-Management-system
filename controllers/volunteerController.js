@@ -52,7 +52,7 @@ const getAllVolunteers = async (req, res) => {
   try {
 
     const volunteers =
-      await Volunteer.find().select("-password");
+      await Volunteer.find({role: "Volunteer"}).select("-password");
 
     res.status(200).json(volunteers);
 
@@ -122,15 +122,17 @@ const getDashboard = async (req, res) => {
   try {
 
     const totalVolunteers =
-      await Volunteer.countDocuments();
+      await Volunteer.countDocuments({role:"Volunteer"});
 
     const approvedVolunteers =
       await Volunteer.countDocuments({
+        role : "Volunteer",
         status: "Approved"
       });
 
     const pendingVolunteers =
       await Volunteer.countDocuments({
+        role : "Volunteer",
         status: "Pending"
       });
 
