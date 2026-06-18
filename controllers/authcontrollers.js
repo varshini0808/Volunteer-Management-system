@@ -21,7 +21,8 @@ const register = async (req, res) => {
       email,
       password: hashedPassword,
       phone,
-      status: role === "Admin"? "Approved" : "Pending"
+      role: "Volunteer",
+      status:"Pending"
     });
 
     res.status(201).json({
